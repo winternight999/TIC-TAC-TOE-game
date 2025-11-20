@@ -100,7 +100,7 @@ const showWinner = (winner) => {
        if (filledBox === 9 && winnerFound === false) {
         console.log("DRAW DETECTED ✔️ SHOWING DRAW MESSAGE");
          msg2.classList.remove("hide");
-           container.classList.add("hide");
+          // container.classList.add("hide");
   }
    };
 
