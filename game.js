@@ -65,45 +65,44 @@ const showWinner = (winner) => {
 };
  
 // draw match check krne ke 
-const checkDraw = () => {
-  console.log("function checked")
-  let filledBox =0;
+//const checkDraw = () => {
+ //console.log("function checked")
+ // let filledBox =0;
   
-  boxes.forEach((box, index) => {
-    if(box.innerText !== "") {
+//  boxes.forEach((box, index) => {
+ //   if(box.innerText !== "") {
+ //     filledBox++;
+//    }
+//  });
+// console.log("filledBox = ", filledBox)
+// console.log("winnerFound = ", winnerFound)
+  
+//  if(filledBox === 9 && winnerFound === false) {
+//    console.log("game draw checked")    msg2.classList.remove("hide")
+//  }
+//};
+
+ const checkDraw = () => {
+ console.log("checkDraw FUNCTION CALLED ✔️");
+
+   let filledBox = 0;
+
+   boxes.forEach((box, index) => {
+  console.log(`Box ${index}: "${box.innerText}"`);
+    if (box.innerText !== "") {
       filledBox++;
     }
-  });
- console.log("filledBox = ", filledBox)
- console.log("winnerFound = ", winnerFound)
-  
-  if(filledBox === 9 && winnerFound === false) {
-    console.log("game draw checked")
-    msg2.classList.remove("hide")
+ });
+
+     console.log("Filled Boxes = ", filledBox);
+     console.log("winnerFound = ", winnerFound);
+
+       if (filledBox === 9 && winnerFound === false) {
+        console.log("DRAW DETECTED ✔️ SHOWING DRAW MESSAGE");
+         msg2.classList.remove("hide");
+           container.classList.add("hide");
   }
-};
-
-// const checkDraw = () => {
-//   console.log("checkDraw FUNCTION CALLED ✔️");
-
-//   let filledBox = 0;
-
-//   boxes.forEach((box, index) => {
-//     // console.log(`Box ${index}: "${box.innerText}"`);
-//     if (box.innerText !== "") {
-//       filledBox++;
-//     }
-//   });
-
-//   // console.log("Filled Boxes = ", filledBox);
-//   // console.log("winnerFound = ", winnerFound);
-
-//   if (filledBox === 9 && winnerFound === false) {
-//     // console.log("DRAW DETECTED ✔️ SHOWING DRAW MESSAGE");
-//     msg2.classList.remove("hide");
-//     // container.classList.add("hide");
-//   }
-// };
+   };
 
    
   // reset button game reset krne ke liye
