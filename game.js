@@ -2,6 +2,7 @@ let boxes = document.querySelectorAll('.box');
 let msgContainer = document.querySelector('.msg-container');
 let msg = document.querySelector('#msg');
 let msg2 = document.querySelector('.msg2');
+let msg3 = document.querySelector('#msg3');
 let container = document.querySelector('.container');
 let newgame = document.querySelector('#newgame');
 let resetgame = document.querySelector('#resetgame')
@@ -64,45 +65,47 @@ const showWinner = (winner) => {
   container.classList.add("hide");
 };
  
-// draw match check krne ke 
-//const checkDraw = () => {
- //console.log("function checked")
- // let filledBox =0;
+draw match check krne ke 
+const checkDraw = () => {
+ console.log("function checked")
+ let filledBox =0;
   
-//  boxes.forEach((box, index) => {
- //   if(box.innerText !== "") {
- //     filledBox++;
-//    }
-//  });
-// console.log("filledBox = ", filledBox)
-// console.log("winnerFound = ", winnerFound)
-  
-//  if(filledBox === 9 && winnerFound === false) {
-//    console.log("game draw checked")    msg2.classList.remove("hide")
-//  }
-//};
-
- const checkDraw = () => {
- console.log("checkDraw FUNCTION CALLED ✔️");
-
-   let filledBox = 0;
-
-   boxes.forEach((box, index) => {
-  console.log(`Box ${index}: "${box.innerText}"`);
-    if (box.innerText !== "") {
-      filledBox++;
-    }
+ boxes.forEach((box, index) => {
+   if(box.innerText !== "") {
+     filledBox++;
+   }
  });
+console.log("filledBox = ", filledBox)
+console.log("winnerFound = ", winnerFound)
+  
+ if(filledBox === 9 && winnerFound === false) {
+   console.log("game draw checked")   
+   msg3.innerText = "Game was draw plz reset the game" 
+   msg2.classList.remove("hide")
+ }
+};
 
-     console.log("Filled Boxes = ", filledBox);
-     console.log("winnerFound = ", winnerFound);
+ // const checkDraw = () => {
+ // console.log("checkDraw FUNCTION CALLED ✔️");
 
-       if (filledBox === 9 && winnerFound === false) {
-        console.log("DRAW DETECTED ✔️ SHOWING DRAW MESSAGE");
-         msg2.classList.remove("hide");
-          // container.classList.add("hide");
-  }
-   };
+ //   let filledBox = 0;
+
+ //   boxes.forEach((box, index) => {
+ //  console.log(`Box ${index}: "${box.innerText}"`);
+ //    if (box.innerText !== "") {
+ //      filledBox++;
+ //    }
+ // });
+
+ //     console.log("Filled Boxes = ", filledBox);
+ //     console.log("winnerFound = ", winnerFound);
+
+ //       if (filledBox === 9 && winnerFound === false) {
+ //        console.log("DRAW DETECTED ✔️ SHOWING DRAW MESSAGE");
+ //         msg2.classList.remove("hide");
+ //          // container.classList.add("hide");
+ //  }
+ //   };
 
    
   // reset button game reset krne ke liye
