@@ -65,7 +65,7 @@ const showWinner = (winner) => {
   container.classList.add("hide");
 };
  
-draw match check krne ke 
+// draw match check krne ke 
 const checkDraw = () => {
  console.log("function checked")
  let filledBox =0;
